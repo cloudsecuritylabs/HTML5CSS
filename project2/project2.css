@@ -1,0 +1,186 @@
+/*stylesheet edited for Assignment 6A*/
+/* CSS validation checked on 10/5/2015: No Error*/
+@import url('http://fonts.googleapis.com/css?family=Open+Sans');
+.fixed
+{
+    background: gray;
+    opacity: .75;
+    border-radius: 25px;
+}
+
+.dark {
+    color:black;
+    font-weight: bold;
+}
+
+.center
+{
+    align-content: center;
+}
+body {
+    background-color: #FFFFFF;
+    background-image: url(image/background.jpg);
+    color: white;
+    font-family: 'Open Sans', sans-serif;;
+}
+
+p{
+    background: gray;
+    opacity: .75;
+    border-radius: 25px;
+    padding: 20px;
+}
+
+header {
+    color: ivory;
+    background-color: brown;
+    background-image: url(image/header.jpg); /* add a background*/
+    /*background-repeat: no-repeat; set the image not to repeat*/
+    opacity:0.9;
+}
+
+#wrapper {
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+    min-width: 960px;
+    background-image: url(image/wrapper.png);
+    background-color: mintcream;
+    box-shadow: 10px 10px 10px #000033;
+}
+
+
+
+nav {
+    padding: 20px 5px 5px 20px; 
+    float: left; 
+    width: 160px;
+    font-weight: bold;
+
+}
+
+
+nav ul {
+    color:white;
+    list-style-type: none;
+    margin: 0;
+    padding-left: 0;
+    font-size: 1.2em;
+}
+
+nav a {
+    text-decoration: none;
+    -webkit-transition: color 3s ease-out;
+    -moz-transition: color 3s ease-out; 
+    -o-transition: color 3s ease-out; 
+    transition: color 3s ease-out;
+}
+
+nav a:link { color: oldlace;}
+nav a:visited {color: lightgrey;}
+nav a:hover {color: #FFFFFF;}
+
+
+h1 {
+    padding: 5px 20px 20px 30px;  
+    margin-bottom: 0;
+    font-family: Georgia, "Times New Roman", serif;
+}
+
+h2 {
+    color: black;
+    text-shadow: 1px 1px 1px #ccc;
+    font-family: Georgia, "Times New Roman", serif;
+}
+
+h3 {
+    color: black;  
+    font-family: Georgia, "Times New Roman", serif;
+}
+
+.main {
+    color: #5C7FA3;
+    font-weight: bold;
+}
+
+#content {
+    background-color: #FFFFFF;
+    margin-left: 190px;
+    padding: 1px 20px 20px 30px; 
+    background-image: url(image/header.jpg);    
+}
+
+#content img {
+    float: left;
+    padding-right: 20px;
+    max-width: 100%;
+	height: auto;
+}
+
+#content ul {
+    /*list-style-image: url(marker.gif);*/
+    list-style-position: inside;
+}
+
+#contact {
+    font-size: 90%;
+}
+
+table { border: 1px solid #3399cc; width: 80%; border-spacing: 0; }
+td, th { padding: 5px; border: 1px solid #3399CC; }
+td { text-align: center; }
+.text { text-align: left; }
+tr:nth-of-type(odd) { background-color: #F4FAFC; }
+
+footer {
+    
+    margin-left: 190px;
+    padding: 20px;
+    font-size: 75%;
+    font-style: italic;
+    font-family: Georgia, "Times New Roman", serif;
+    opacity:.9;
+    
+}
+
+
+/* Part A: Backward Compatibility for older browsers*/
+header, hgroup, nav, footer, figure, figcaption, aside, section, article { display: block; }
+
+/*flexible images*/
+img { max-width: 100%; height: auto; }
+
+#mobile { display: none; }
+#desktop { display: inline; }
+
+
+
+/* Part B: Configure Tablet Display*/
+@media only screen and (max-width: 768px){
+    body { margin: 0; }
+    #wrapper { min-width: 0; width: auto; }
+    #content { margin-left: 0; }
+    nav { float: none; width: auto; padding: 0; }
+    nav ul {text-align: center; }
+    nav li { display: inline; padding: 0 0.75em; }
+    footer { margin-left: 0; }    
+}
+
+
+/* Part C: Configure Smartphone Display*/
+@media only screen and (max-width: 480px)
+{
+    body { margin: 0; }
+    #wrapper { min-width: 0; width: auto; margin:0;}
+    #content { padding: 0.1em 1em; margin: 0; font-size: 90%; }
+    h1 { margin: 0; font-size: 1.5em; padding-left: 0.3em; }
+    nav ul { padding: 0;}
+    nav li { display: block; margin: 0; border-bottom: 2px solid #330000; }
+    nav a { display: block; }
+    #content img { float: none; padding: 0; margin: 0.1em; }
+    #content ul { list-style-position: outside; }
+    #mobile { display: inline; }
+    #desktop { display: none; }
+}
+
+/* Part D: Configure Desktop Display area above Media Queries section */

@@ -1,0 +1,183 @@
+/*stylesheet edited for Assignment 6A*/
+/* CSS validation checked on 10/5/2015: No Error*/
+@import url('http://fonts.googleapis.com/css?family=Open+Sans');
+
+body {
+    background-color: #FFFFFF;
+    background-image: url(image/background.jpg);
+    color: #666666;
+    font-family: 'Open Sans', sans-serif;;
+}
+
+header {
+    color: blanchedalmond;
+    background-color: brown;
+    /*background-image: url(image/header.jpg); /* add a background*/
+    /*background-repeat: no-repeat; set the image not to repeat*/
+}
+
+#wrapper {
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+    min-width: 960px;
+    background-image: url(image/wrapper.jpg);
+    /* background-color: #FFFFFF;  changing background color for chapter 7*/
+    background-color: #90C7E3;
+    box-shadow: 5px 5px 5px #000033;
+}
+
+nav {
+    padding: 20px 5px 5px 20px; 
+    float: left; 
+    width: 160px;
+    font-weight: bold;
+    /* background-color: #90C7E3;*/
+}
+
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding-left: 0;
+    font-size: 1.2em;
+}
+
+nav a {
+    text-decoration: none;
+    -webkit-transition: color 3s ease-out;
+    -moz-transition: color 3s ease-out; 
+    -o-transition: color 3s ease-out; 
+    transition: color 3s ease-out;
+}
+
+nav a:link { color: #000033;}
+nav a:visited {color: #344873;}
+nav a:hover {color: #FFFFFF;}
+
+/*
+I could have assigned multiple selector property this way also:
+
+h1 h2 h3
+{
+font-family: Georgia, "Times New Roman", serif;
+}
+
+*/
+
+#content img, #content video, #content embed { float: left; padding-right: 20px; }
+#gallery { position: relative; height: 200px; }
+#gallery ul {list-style-type: none; width: 300px;}
+#gallery li { display: inline; float: left; padding: 10px; }
+#gallery img {border-style: none;float: none;}
+#gallery a { text-decoration: none; font-style: italic; color: #333333; }
+#gallery span { position: absolute; left: -1000px; opacity: 0; transition: opacity 3s ease-in-out; }
+#gallery a:hover span  { position: absolute; top: 16px; left: 320px; text-align: left; opacity: 1; }
+figure { position: absolute; left: 280px; text-align: center; opacity: .25; }
+
+
+h1 {
+    padding: 1px 20px 20px 30px;  
+    margin-bottom: 0;
+    font-family: Georgia, "Times New Roman", serif;
+}
+
+h2 {
+    color: black;
+    text-shadow: 1px 1px 1px #ccc;
+    font-family: Georgia, "Times New Roman", serif;
+}
+
+h3 {
+    color: black;  
+    font-family: Georgia, "Times New Roman", serif;
+}
+
+dt {
+    color: #000033;
+}
+
+.main {
+    color: #5C7FA3;
+    font-weight: bold;
+}
+
+#content {
+    background-color: #FFFFFF;
+    margin-left: 190px;
+    padding: 1px 20px 20px 30px;   
+}
+
+#content img {
+    float: left;
+    padding-right: 20px;
+    max-width: 100%;
+	height: auto;
+}
+
+#content ul {
+    list-style-image: url(marker.gif);
+    list-style-position: inside;
+}
+
+#contact {
+    font-size: 90%;
+}
+
+table { border: 1px solid #3399cc; width: 80%; border-spacing: 0; }
+td, th { padding: 5px; border: 1px solid #3399CC; }
+td { text-align: center; }
+.text { text-align: left; }
+tr:nth-of-type(odd) { background-color: #F4FAFC; }
+
+footer {
+    background-color: #FFFFFF;
+    margin-left: 190px;
+    padding: 20px;
+    font-size: 75%;
+    font-style: italic;
+    font-family: Georgia, "Times New Roman", serif;
+    
+}
+
+
+/* Part A: Backward Compatibility for older browsers*/
+header, hgroup, nav, footer, figure, figcaption, aside, section, article { display: block; }
+
+/*flexible images*/
+img { max-width: 100%; height: auto; }
+
+#mobile { display: none; }
+#desktop { display: inline; }
+
+
+
+/* Part B: Configure Tablet Display*/
+@media only screen and (max-width: 768px){
+    body { margin: 0; }
+    #wrapper { min-width: 0; width: auto; }
+    #content { margin-left: 0; }
+    nav { float: none; width: auto; padding: 0; }
+    nav ul {text-align: center; }
+    nav li { display: inline; padding: 0 0.75em; }
+    footer { margin-left: 0; }    
+}
+
+
+/* Part C: Configure Smartphone Display*/
+@media only screen and (max-width: 480px)
+{
+    body { margin: 0; }
+    #wrapper { min-width: 0; width: auto; margin:0;}
+    #content { padding: 0.1em 1em; margin: 0; font-size: 90%; }
+    h1 { margin: 0; font-size: 1.5em; padding-left: 0.3em; }
+    nav ul { padding: 0;}
+    nav li { display: block; margin: 0; border-bottom: 2px solid #330000; }
+    nav a { display: block; }
+    #content img { float: none; padding: 0; margin: 0.1em; }
+    #content ul { list-style-position: outside; }
+    #mobile { display: inline; }
+    #desktop { display: none; }
+}
+
+/* Part D: Configure Desktop Display area above Media Queries section */
